@@ -1,4 +1,5 @@
 data
 .venv
 __pycache__/
-outputs/.DS_Store
+.DS_Store
+outputs/customer_risk_summary.csv
