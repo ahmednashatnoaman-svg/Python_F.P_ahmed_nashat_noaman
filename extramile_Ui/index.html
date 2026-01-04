@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ExtraMile Risk Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>ExtraMile</h2>
+            </div>
+            <ul>
+                <li class="active" data-target="overview">
+                    <span class="icon"><i class="fas fa-th-large"></i></span> <span>Overview</span>
+                </li>
+                <li data-target="risk">
+                    <span class="icon"><i class="fas fa-shield-alt"></i></span> <span>Risk Monitor</span>
+                </li>
+                <li data-target="trends">
+                    <span class="icon"><i class="fas fa-chart-line"></i></span> <span>Trends</span>
+                </li>
+                <li data-target="transactions">
+                    <span class="icon"><i class="fas fa-exchange-alt"></i></span> <span>Transactions</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1 id="page-title">Overview</h1>
+                <div class="date-badge" id="last-updated">Analysis Output</div>
+            </header>
+
+            <!-- 1. OVERVIEW: Stats Dashboard -->
+            <section id="page-overview" class="page-section active">
+                <!-- KPI Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Cusotmers</h3>
+                        <p class="stat-value" id="kpi-total-customers">--</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Critical Risk</h3>
+                        <p class="stat-value text-critical" id="kpi-critical-risk">--</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Flagged Tx</h3>
+                        <p class="stat-value" id="kpi-flagged-count">--</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Avg Daily/Cust</h3>
+                        <p class="stat-value" id="kpi-avg-daily">--</p>
+                    </div>
+                </div>
+
+                <!-- Snapshot Charts -->
+                <div class="dashboard-row">
+                    <div class="chart-box">
+                        <h4>Risk Distribution</h4>
+                        <img src="../charts/1_risk_dist.png" alt="Risk Distribution" class="dash-chart">
+                    </div>
+                    <div class="chart-box">
+                        <h4>Daily Transaction Volume</h4>
+                        <img src="../charts/12a_daily_total.png" alt="Daily Total" class="dash-chart">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. RISK MONITOR -->
+            <section id="page-risk" class="page-section">
+                <!-- Top Risky Table -->
+                <div class="content-card">
+                    <h3>Top 5 Critical Risk Customers</h3>
+                    <table class="data-table" id="table-risky-customers">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Risk Score</th>
+                                <th>Band</th>
+                            </tr>
+                        </thead>
+                        <tbody><!-- Populated by JS --></tbody>
+                    </table>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card"><img src="../charts/2_z_score.png" alt="Z-Score"></div>
+                    <div class="gallery-card"><img src="../charts/13_risk_waterfall.png" alt="Waterfall"></div>
+                    <div class="gallery-card"><img src="../charts/3_risk_vs_amt.png" alt="Risk Amt"></div>
+                    <div class="gallery-card"><img src="../charts/4_fraud_map.png" alt="Fraud Map"></div>
+                    <div class="gallery-card"><img src="../charts/5_fraud_types.png" alt="Fraud Types"></div>
+                    <div class="gallery-card"><img src="../charts/6_fraud_hourly.png" alt="Hourly Risk"></div>
+                </div>
+            </section>
+
+            <!-- 3. TRENDS -->
+            <section id="page-trends" class="page-section">
+                <div class="gallery-grid">
+                    <div class="gallery-card full-width"><img src="../charts/9_daily_trend.png" alt="Daily Trend"></div>
+                    <div class="gallery-card full-width"><img src="../charts/11_hourly_ts.png" alt="Hourly Series">
+                    </div>
+                    <div class="gallery-card"><img src="../charts/10_hourly_curve.png" alt="Hourly Curve"></div>
+                    <div class="gallery-card"><img src="../charts/12b_daily_count.png" alt="Daily Count"></div>
+                    <div class="gallery-card"><img src="../charts/12c_daily_mean.png" alt="Daily Mean"></div>
+                    <div class="gallery-card"><img src="../charts/12d_daily_max.png" alt="Daily Max"></div>
+                </div>
+            </section>
+
+            <!-- 4. TRANSACTIONS -->
+            <section id="page-transactions" class="page-section">
+                <!-- Payment Types Table -->
+                <div class="content-card">
+                    <h3>Payment Type Statistics</h3>
+                    <table class="data-table" id="table-payment-types">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Count</th>
+                                <th>Average</th>
+                                <th>Max</th>
+                                <th>Total Sum</th>
+                            </tr>
+                        </thead>
+                        <tbody><!-- Populated by JS --></tbody>
+                    </table>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-card"><img src="../charts/7_type_box.png" alt="Type Box"></div>
+                    <div class="gallery-card"><img src="../charts/8_type_vol.png" alt="Type Vol"></div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="dashboard_data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

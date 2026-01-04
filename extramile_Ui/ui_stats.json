@@ -1,0 +1,84 @@
+{
+    "payment_types": [
+        {
+            "type": "CASH_IN",
+            "count": 812292,
+            "mean": 158693.3473988541,
+            "max": 1915267.9,
+            "sum": 128905336545.31
+        },
+        {
+            "type": "CASH_OUT",
+            "count": 204338,
+            "mean": 112234.92165500298,
+            "max": 10000000.0,
+            "sum": 22933859421.14
+        },
+        {
+            "type": "DEBIT",
+            "count": 23409,
+            "mean": 4126.897117775215,
+            "max": 225775.49,
+            "sum": 96606534.63
+        },
+        {
+            "type": "PAYMENT",
+            "count": 995783,
+            "mean": 10810.089717649327,
+            "max": 182787.85,
+            "sum": 10764503569.31
+        },
+        {
+            "type": "TRANSFER",
+            "count": 20244,
+            "mean": 394059.90627494565,
+            "max": 10000000.0,
+            "sum": 7977348742.63
+        }
+    ],
+    "daily_cust": {
+        "avg": 83014.06015879309,
+        "median": 22183.62,
+        "max": 10000000.0
+    },
+    "risk_summary": {
+        "total": 2055102,
+        "breakdown": {
+            "Low": 1992164,
+            "Medium": 52313,
+            "High": 1592,
+            "Critical": 9033
+        }
+    },
+    "top_risky": [
+        {
+            "customer_id": "C450627726",
+            "score": 43.83449300799395,
+            "band": "Critical"
+        },
+        {
+            "customer_id": "C455380648",
+            "score": 43.48520442537168,
+            "band": "Critical"
+        },
+        {
+            "customer_id": "C513932284",
+            "score": 43.4492819239756,
+            "band": "Critical"
+        },
+        {
+            "customer_id": "C570470570",
+            "score": 43.41539093525005,
+            "band": "Critical"
+        },
+        {
+            "customer_id": "C1844608283",
+            "score": 43.25078176943682,
+            "band": "Critical"
+        }
+    ],
+    "flagged_summary": {
+        "total": 283637,
+        "avg_amount": 336826.7363529087
+    }
+}
