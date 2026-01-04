@@ -1,4 +1,4 @@
 data
 .venv
 __pycache__/
-outputs/
+outputs/.DS_Store
